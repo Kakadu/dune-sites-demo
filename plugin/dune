@@ -1,0 +1,8 @@
+(library
+ (public_name b)
+ (libraries c.register))
+
+(plugin
+ (name b)
+ (libraries b)
+ (site (c plugins)))
