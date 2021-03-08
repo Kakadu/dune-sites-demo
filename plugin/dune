@@ -1,9 +1,10 @@
 (library
- (public_name plugin1_impl)
+ (public_name plugin1.plugin1_impl)
+ (name plugin1_impl)
  (modules plugin1_impl)
  (libraries app.register))
 
 (plugin
  (name plugin1)
- (libraries plugin1_impl)
+ (libraries plugin1.plugin1_impl)
  (site (app plugins)))
