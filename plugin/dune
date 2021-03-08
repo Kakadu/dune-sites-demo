@@ -1,8 +1,9 @@
 (library
- (public_name b)
+ (public_name plugin1_impl)
+ (modules plugin1_impl)
  (libraries app.register))
 
 (plugin
- (name b_foo)
- (libraries b)
- (site (c plugins)))
+ (name plugin1)
+ (libraries plugin1_impl)
+ (site (app plugins)))
