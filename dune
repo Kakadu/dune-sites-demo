@@ -1,13 +1,13 @@
 (executable
- (public_name c)
+ (public_name app)
  (modules sites c)
- (libraries c.register dune-site dune-site.plugins))
+ (libraries app.register dune-site dune-site.plugins))
 
 (library
- (public_name c.register)
+ (public_name app.register)
  (name c_register)
  (modules c_register))
 
 (generate_sites_module
  (module sites)
- (plugins (c plugins)))
+ (plugins (app plugins)))
