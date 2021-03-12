@@ -1,10 +1,11 @@
 (executable
  (public_name app)
  (modules sites app)
- (libraries app.register dune-site dune-site.plugins))
+ (libraries app.register dune-site dune-site.plugins ))
 
 (library
  (public_name app.register)
+ ;(libraries stdio)
  (name registration)
  (modules registration))
 

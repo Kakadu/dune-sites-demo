@@ -2,9 +2,9 @@
  (public_name plugin1.plugin1_impl)
  (name plugin1_impl)
  (modules plugin1_impl)
- (libraries app.register))
+ (libraries app.MyControls app.register stdio))
 
 (plugin
  (name plugin1)
- (libraries plugin1.plugin1_impl)
+ (libraries stdio plugin1.plugin1_impl)
  (site (app plugins)))
