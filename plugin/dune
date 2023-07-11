@@ -1,10 +1,40 @@
+; (library
+;  (name LL)
+;  (modules LL)
+;  (public_name plugin1.LL)
+;  (wrapped false)
+;  (foreign_stubs
+;   (language c)
+;   (names cfile1))
+;  (flags
+;   (:standard
+;    -linkall
+;    ; explicit cclib doesn't help but...
+;    -cclib
+;    -lLLVM-14))
+;  (libraries llvm))
+
 (library
  (public_name plugin1.plugin1_impl)
  (name plugin1_impl)
  (modules plugin1_impl)
- (libraries app.register))
+ (flags
+  (:standard
+   -linkall
+   ; explicit cclib doesn't help but...
+   ;-cclib
+   ;-lLLVM-14
+   ;
+   ))
+ (libraries
+  app.register
+  llvm
+  unix
+  ;LL
+  ))
 
 (plugin
  (name plugin1)
  (libraries plugin1.plugin1_impl)
- (site (app plugins)))
+ (site
+  (app plugins)))
