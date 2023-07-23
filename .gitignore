@@ -1,2 +1,5 @@
 /*.log
+*.cm[ixo]
+*.cmxs
+a.out
 
