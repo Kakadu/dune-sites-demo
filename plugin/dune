@@ -1,18 +1,6 @@
-; (library
-;  (name LL)
-;  (modules LL)
-;  (public_name plugin1.LL)
-;  (wrapped false)
-;  (foreign_stubs
-;   (language c)
-;   (names cfile1))
-;  (flags
-;   (:standard
-;    -linkall
-;    ; explicit cclib doesn't help but...
-;    -cclib
-;    -lLLVM-14))
-;  (libraries llvm))
+(env
+ (dev
+  (flags ())))
 
 (library
  (public_name plugin1.plugin1_impl)

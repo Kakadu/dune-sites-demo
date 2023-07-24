@@ -1,3 +1,7 @@
+(env
+ (dev
+  (flags ())))
+
 (executable
  (public_name app)
  (modules sites app)
@@ -10,4 +14,5 @@
 
 (generate_sites_module
  (module sites)
- (plugins (app plugins)))
+ (plugins
+  (app plugins)))
