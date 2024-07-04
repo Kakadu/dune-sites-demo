@@ -8,21 +8,27 @@
  (modules plugin1_impl)
  (flags
   (:standard
-   -linkall
+   ;-linkall
    ; explicit cclib doesn't help but...
    ;-cclib
-   ;-lLLVM-14
+   ;-lLLVM-16
+   ;
+   ))
+ (ocamlopt_flags
+  (:standard
+   -linkall
+   ;/media/work2/.opam/llvm16/lib/llvm/shared/llvm.cmxa
    ;
    ))
  (libraries
   app.register
   llvm
-  unix
+  ;unix
   ;LL
   ))
 
 (plugin
  (name plugin1)
- (libraries plugin1.plugin1_impl)
+ (libraries plugin1.plugin1_impl llvm)
  (site
   (app plugins)))

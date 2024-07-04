@@ -16,3 +16,8 @@
  (module sites)
  (plugins
   (app plugins)))
+
+(cram
+ (deps
+  ./app.exe
+  (package plugin1)))
